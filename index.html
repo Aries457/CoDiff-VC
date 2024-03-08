@@ -3,7 +3,7 @@
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>Boosting Multi-Speaker Expressive Speech Synthesis with Semi-supervised Contrastive Learning</title>
+  <title>CoDiff-VC: A Codec-Assisted Diffusion Model for Zero-shot Voice Conversion</title>
   <meta name="generator" content="Jekyll v3.9.0">
   <meta property="og:title" content="TODO: title">
   <meta property="og:locale" content="en_US">
@@ -35,40 +35,41 @@
 
   <section class="main-content">
     <h1 id="">
-      <center>Boosting Multi-Speaker Expressive Speech Synthesis with Semi-supervised Contrastive Learning</center>
+      <center>CoDiff-VC: A Codec-Assisted Diffusion Model for Zero-shot Voice Conversion</center>
     </h1>
 
 
     <h2>0. Contents</h2>
     <ol>
       <li><a href="#abstract">Abstract</a></li>
-      <li><a href="#prediction">Demos -- expressive speech with a specific style and emotion for Multi-lingual target
-          speakers</a></li>
+      <li><a href="#prediction">Demos -- The converted samples with comparison and ablation systems on the zero-shot VC task.</a></li>
       </li>
 
     </ol>
 
     <br><br>
     <h2 id="abstract">1. Abstract<a name="abstract"></a></h2>
-    <p> This paper aims to build a Mutli-speaker, Multi-emotion, Multi-style, Multilingual (M4) TTS. We address this challenging task with a <i>semi-supervised contrastive learning</i>-based TTS framework. To effectively capture and disentangle speaker, style and emotion representations, contrastive learning from different levels, i.e. <i>utterance</i> and <i>category</i> level, is leveraged to extract the desired representations from speech. Furthermore, a semi-supervised training strategy is introduced to improve the data utilization efficiency by involving multi-domain data, including style-labeled data, emotion-labeled data, and abundant unlabeled data.
-To achieve expressive speech with diverse styles and emotions for a target speaker, the learned disentangled representations are integrated into an improved VITS model. Experiments on monolingual and multilingual corpora demonstrate the effectiveness of the proposed method. 
-    </p>
-<!--     <center><img src='fig/ssl0102_00.jpg' width="50%"><img src='fig/vits-ssl0102_00.jpg' width="50%"></center> -->
+    <p> Zero-shot voice conversion (VC) aims to convert the original speaker's timbre to any target speaker while maintaining the linguistic content unchanged. 
+      Current mainstream zero-shot voice conversion approaches depend on pre-trained recognition models to disentangle linguistic content and speaker representation, 
+      which results in a timbre residual within the decoupled linguistic content and inadequacies in speaker representation modeling. In this study, we propose CoDiff-VC, 
+      an end-to-end zero-shot voice conversion framework that incorporates a speech codec and a diffusion model. Specifically, 
+      we leverage the speech codec to extract speech tokens from speech and use a diffusion model to reconstruct speech from speech tokens for high speech quality. 
+      Besides, we introduce Mix-Style layer normalization (MSLN) to disentangle speaker timbre in speech tokens and incorporate multi-scale timbre modeling in diffusion to improve speaker similarity. 
+      Finally, for better speech quality and speaker similarity, we propose dual classifier-free guidance. Objective and subjective experiments demonstrate that CoDiff-VC significantly improves speaker similarity and generates natural and higher-quality speech.</p>
     <div class="image-container">
         <div class="image-box">
             <img src="fig/ssl0102_00.jpg" width="100%" alt="描述图片的文字1">
             <p>Fig.1. The architecture of speech representation learning module.</p>
         </div>
-        
         <div class="image-box">
-            <img src="fig/vits-ssl0102_00.jpg" width="100%" alt="描述图片的文字2">
-            <p>Fig.2. The architecture of multi-speaker expressive VITS.</p>
+            <img src="fig/ssl0102_00.jpg" width="100%" alt="描述图片的文字1">
+            <p>Fig.1. The architecture of speech representation learning module.</p>
         </div>
     </div>
     <br><br>
 
 
-    <h2>2. Demos -- expressive speech with a specific style and emotion for Multi-lingual target speakers<a
+    <h2>2. Demos --  The converted samples with comparison and ablation systems on the zero-shot VC task<a
         name="prediction"></a></h2>
     <h3>Convert the emotion and style expresssions from different source speakers to the neutral target speakers without
       emotional and stylistic training data.</h3>
