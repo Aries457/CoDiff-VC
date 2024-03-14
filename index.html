@@ -43,9 +43,9 @@
     <h2>0. Contents</h2>
     <ol>
       <li><a href="#abstract">Abstract</a></li>
-      <li><a href="#prediction">Demos -- The converted samples with comparison and ablation systems on the zero-shot VC task.</a></li>
+      <li><a href="#prediction">Comparison -- The converted samples with comparison systems on the zero-shot VC task.</a></li>
       </li>
-
+      <li><a href="#abstract">Ablation -- The converted samples with ablation systems on the zero-shot VC task.</a></li>
     </ol>
 
     <br><br>
@@ -70,7 +70,7 @@
     <br><br>
 
 
-    <h2>2. Demos --  The converted samples with comparison and ablation systems on the zero-shot VC task<a
+    <h2>2. Comparison --  The converted samples with comparison systems on the zero-shot VC task<a
         name="prediction"></a></h2>
     <h3>Convert the emotion and style expresssions from different source speakers to the neutral target speakers without
       emotional and stylistic training data.</h3>
@@ -157,14 +157,96 @@
         </tbody>
     </table>
 
-    <!-- <p><b>Short summary:</b> The results indicate the effectiveness of our proposed method can successfully transfer the
-      source emotion to the target speaker while maintaining the target speaker's timbre.</p> -->
+    
 
     <br><br>
     
 
+    <h2>3. Ablation --  The converted samples with ablation systems on the zero-shot VC task<a
+        name="prediction"></a></h2>
 
-
+    <!-- <p><b>Chinese speaker: F1 </b></p> -->
+    <table>
+        <thead>
+          <tr>
+            <th style="text-align: center">taget speaker</th>
+            <th style="text-align: center">source speech</th>
+            <th style="text-align: center">CoDiff-VC</th>
+            <th style="text-align: center">-MSLN</th>
+            <th style="text-align: center">-fine-grained</th>
+            <th style="text-align: center">-dual cfg</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td rowspan="2"><audio style="width: 200px;" src="sample/1/reference.wav" controls="" preload=""></audio></td>
+            <td rowspan="2"><audio style="width: 200px;" src="sample/1/source.wav" controls="" preload=""></audio></td>
+            <td colspan="4">text</td>
+          </tr>
+          <tr>
+            <td><audio style="width: 200px;" src="sample/covc/you.wav" controls="" preload=""></audio></td>
+            <td><audio style="width: 200px;" src="sample/1/sef.wav" controls="" preload=""></audio></td>
+            <td><audio style="width: 200px;" src="sample/1/lm.wav" controls="" preload=""></audio></td>
+            <td><audio style="width: 200px;"src="sample/1/co.wav" controls="" preload=""></audio></td>
+          </tr>
+          <tr>
+            <td rowspan="2"><audio style="width: 200px;" src="sample/2/reference.wav" controls="" preload=""></audio></td>
+            <td rowspan="2"><audio style="width: 200px;" src="sample/2/source.wav" controls="" preload=""></audio></td>
+            <td colspan="4">text</td>
+          </tr>
+          <tr>
+            <td><audio style="width: 200px;" src="sample/2/you.wav" controls="" preload=""></audio></td>
+            <td><audio style="width: 200px;" src="sample/2/sef.wav" controls="" preload=""></audio></td>
+            <td><audio style="width: 200px;" src="sample/2/lm.wav" controls="" preload=""></audio></td>
+            <td><audio style="width: 200px;" src="sample/2/co.wav" controls="" preload=""></audio></td>
+          </tr>
+          <tr>
+            <td rowspan="2"><audio style="width: 200px;" src="sample/3/reference.wav" controls="" preload=""></audio></td>
+            <td rowspan="2"><audio style="width: 200px;" src="sample/3/source.wav" controls="" preload=""></audio></td>
+            <td colspan="4">text</td>
+          </tr>
+          <tr>
+            <td><audio style="width: 200px;" src="sample/3/you.wav" controls="" preload=""></audio></td>
+            <td><audio style="width: 200px;" src="sample/3/sef.wav" controls="" preload=""></audio></td>
+            <td><audio style="width: 200px;" src="sample/3/lm.wav" controls="" preload=""></audio></td>
+            <td><audio style="width: 200px;" src="sample/3/co.wav" controls="" preload=""></audio></td>
+          </tr>
+          <tr>
+            <td rowspan="2"><audio style="width: 200px;" src="sample/3/reference.wav" controls="" preload=""></audio></td>
+            <td rowspan="2"><audio style="width: 200px;" src="sample/3/source.wav" controls="" preload=""></audio></td>
+            <td colspan="4">text</td>
+          </tr>
+          <tr>
+            <td><audio style="width: 200px;" src="sample/3/you.wav" controls="" preload=""></audio></td>
+            <td><audio style="width: 200px;" src="sample/3/sef.wav" controls="" preload=""></audio></td>
+            <td><audio style="width: 200px;" src="sample/3/lm.wav" controls="" preload=""></audio></td>
+            <td><audio style="width: 200px;" src="sample/3/co.wav" controls="" preload=""></audio></td>
+          </tr>
+          <tr>
+            <td rowspan="2"><audio style="width: 200px;" src="sample/3/reference.wav" controls="" preload=""></audio></td>
+            <td rowspan="2"><audio style="width: 200px;" src="sample/3/source.wav" controls="" preload=""></audio></td>
+            <td colspan="4">text</td>
+          </tr>
+          <tr>
+            <td><audio style="width: 200px;" src="sample/3/you.wav" controls="" preload=""></audio></td>
+            <td><audio style="width: 200px;" src="sample/3/sef.wav" controls="" preload=""></audio></td>
+            <td><audio style="width: 200px;" src="sample/3/lm.wav" controls="" preload=""></audio></td>
+            <td><audio style="width: 200px;" src="sample/3/co.wav" controls="" preload=""></audio></td>
+          </tr>
+          <tr>
+            <td rowspan="2"><audio style="width: 200px;" src="sample/3/reference.wav" controls="" preload=""></audio></td>
+            <td rowspan="2"><audio style="width: 200px;" src="sample/3/source.wav" controls="" preload=""></audio></td>
+            <td colspan="4">text</td>
+          </tr>
+          <tr>
+            <td><audio style="width: 200px;" src="sample/3/you.wav" controls="" preload=""></audio></td>
+            <td><audio style="width: 200px;" src="sample/3/sef.wav" controls="" preload=""></audio></td>
+            <td><audio style="width: 200px;" src="sample/3/lm.wav" controls="" preload=""></audio></td>
+            <td><audio style="width: 200px;" src="sample/3/co.wav" controls="" preload=""></audio></td>
+          </tr>
+        </tbody>
+    </table>
+    <br></br>
     <footer class="site-footer">
 
       <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com/">GitHub
